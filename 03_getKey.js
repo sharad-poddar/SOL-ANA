@@ -56,7 +56,7 @@ const anotherMain = async()=>{
     // bs58.decode / bs58.encode is used to endcode and decode private key
     // public key has no matter with it
     // uint8array private key is used
-
+    
 }
 
 
@@ -65,43 +65,3 @@ const anotherMain = async()=>{
 
 main();
 anotherMain();
-
-
-
-
-
-// // generating keys randomly
-// // we get secret and public key in format of array uint8array(64) and uint8array(32)
-// // secret key is Mnemonic phrase - this is the most common
-// const ownerKeyPair = Keypair.generate();
-// console.log(ownerKeyPair); 
-// const publicKey = ownerKeyPair.publicKey;
-// const secretkey = ownerKeyPair.secretKey;
-
-// console.log('public key -> ',publicKey);
-// console.log('secret key -> ',secretkey);
-
-// // converting uint8rray into string
-// // here in both the cases toBase58() and toString() we get same string
-// console.log('public key -> ',publicKey.toBase58());
-// console.log('public key in string -> ',publicKey.toString());
-// // here we simpley get the string of array like all numbers are in string
-// console.log('secret key -> ',secretkey.toString());
-
-// // getting actual format from public key
-// const address = 'AuPefMfxYmzaXS5Jiv9SBkHWZ9P6gFDb35Y5NcnX9Wwd';
-// const addressInFormat = new PublicKey(address);
-// console.log(addressInFormat);
-
-
-// // generating key pair from secret KEY
-// // private key as an array of bytes
-// // const secret = JSON.parse(process.env.PRIVATE_KEY ?? "") as number[]
-// // console.log('secret -> ',secret);
-// // const secretKey = Uint8Array.from(secret)
-// // console.log('secretKey -> ',secretKey);
-// // const keypairFromSecretKey = Keypair.fromSecretKey(secretKey)
-// // console.log('keyPair -> ',keypairFromSecretKey);
-
-// const keypairFromSecretKey = Keypair.fromSecretKey(Base58(process.env.PRIVATE_KEY))
-// console.log(keypairFromSecretKey);
